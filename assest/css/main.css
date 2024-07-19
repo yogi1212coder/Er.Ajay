@@ -181,7 +181,7 @@ body {
 }
 
 .card:hover {
-  background-color: rgba(6, 183, 243, 0.169);
+  background-color: rgba(232, 239, 241, 0.742);
   cursor: pointer;
   /* Larger box shadow on hover */
 }
@@ -369,7 +369,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  /* background: white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,6 +378,3 @@ button:hover {
   font-size: 20px;
 }
 
-#content {
-  display: none;
-}
