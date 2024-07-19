@@ -361,6 +361,27 @@ button:hover {
 .progress-bar {
   height: 20px;
 }
+
+
+
+
+ .progress-bar {
+            position: relative;
+            height: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            height: 100%;
+        }
+        .skill-container {
+            margin-bottom: 20px;
+        }
 #back-to-top {
   position: fixed;
   bottom: 20px;
