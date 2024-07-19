@@ -641,28 +641,27 @@
         };
     </script> -->
 
-
-  <script>
-        // JavaScript to handle the loader and content display
-        document.addEventListener('DOMContentLoaded', function () {
-            const loader = document.getElementById('loader');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loader = document.getElementById('loader');
         const content = document.getElementById('content');
 
         if (!localStorage.getItem('visited')) {
             // Show the loader and set it to disappear after a delay
             loader.style.display = 'flex';
-                setTimeout(() => {
-            loader.style.display = 'none';
-        content.style.display = 'block';
-        localStorage.setItem('visited', 'true');
-                }, 3000); // Adjust the delay time as needed
-            } else {
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+                localStorage.setItem('visited', 'true');
+            }, 4000); // Adjust the delay time as needed (4 seconds here)
+        } else {
             // Hide the loader and show the content immediately
             loader.style.display = 'none';
-        content.style.display = 'block';
-            }
-        });
+            content.style.display = 'block';
+        }
+    });
 </script>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
