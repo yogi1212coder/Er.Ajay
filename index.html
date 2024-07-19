@@ -20,9 +20,13 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 
-
-    <div id="content" style="display: none;">
+    <div id="content">
 
         <!-- header-section -->
         <section class="hero">
@@ -474,43 +478,43 @@
                             </form>
                         </div>
                         <!-- <div class="container"> -->
-                            <!-- <div class="row justify-content-center"> -->
-                                <div class="col-md-5 offset-md-1 col-12">
-                                    <div class="row text-center text-md-start text-lg-start  ">
-                                        <div
-                                            class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
-                                            <i class="fa fa-envelope-o fs-3 contact-icon bg-warning px-3 py-3"></i>
-                                        </div>
-                                        <div class="col-12 col-md-10 mt-4">
-                                            <p class="fs-5 text-dark">MY EMAIL</p>
-                                            <h4 class="text-secondary fs-6">yogiajay185@gmail.com</h4>
-                                            <h4 class="text-secondary fs-6">ajayyogi487@gmail.com</h4>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center text-md-start mb-3">
-                                        <div
-                                            class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
-                                            <i class="bi bi-geo-alt fs-3 contact-icon bg-info px-3 py-3"></i>
-                                        </div>
-                                        <div class="col-12 col-md-10 mt-4">
-                                            <p class="fs-5 text-dark">ADDRESS</p>
-                                            <h4 class="text-secondary fs-6">Chomu</h4>
-                                            <h4 class="text-secondary fs-6">Jaipur</h4>
-                                        </div>
-                                    </div>
-                                    <div class="row text-center text-md-start">
-                                        <div
-                                            class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
-                                            <i class="fa fa-phone fs-3 contact-icon bg-danger px-3 py-3"></i>
-                                        </div>
-                                        <div class="col-12 col-md-10 mt-4">
-                                            <p class="fs-5 text-dark">PHONE</p>
-                                            <h4 class="text-secondary fs-6">6377125333</h4>
-                                            <h4 class="text-secondary fs-6">9521322901</h4>
-                                        </div>
-                                    </div>
+                        <!-- <div class="row justify-content-center"> -->
+                        <div class="col-md-5 offset-md-1 col-12">
+                            <div class="row text-center text-md-start text-lg-start  ">
+                                <div
+                                    class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
+                                    <i class="fa fa-envelope-o fs-3 contact-icon bg-warning px-3 py-3"></i>
                                 </div>
-                            <!-- </div>
+                                <div class="col-12 col-md-10 mt-4">
+                                    <p class="fs-5 text-dark">MY EMAIL</p>
+                                    <h4 class="text-secondary fs-6">yogiajay185@gmail.com</h4>
+                                    <h4 class="text-secondary fs-6">ajayyogi487@gmail.com</h4>
+                                </div>
+                            </div>
+                            <div class="row text-center text-md-start mb-3">
+                                <div
+                                    class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
+                                    <i class="bi bi-geo-alt fs-3 contact-icon bg-info px-3 py-3"></i>
+                                </div>
+                                <div class="col-12 col-md-10 mt-4">
+                                    <p class="fs-5 text-dark">ADDRESS</p>
+                                    <h4 class="text-secondary fs-6">Chomu</h4>
+                                    <h4 class="text-secondary fs-6">Jaipur</h4>
+                                </div>
+                            </div>
+                            <div class="row text-center text-md-start">
+                                <div
+                                    class="col-12 col-md-2 mt-5 d-flex justify-content-center justify-content-md-start">
+                                    <i class="fa fa-phone fs-3 contact-icon bg-danger px-3 py-3"></i>
+                                </div>
+                                <div class="col-12 col-md-10 mt-4">
+                                    <p class="fs-5 text-dark">PHONE</p>
+                                    <h4 class="text-secondary fs-6">6377125333</h4>
+                                    <h4 class="text-secondary fs-6">9521322901</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div>
                         </div> -->
 
                     </div>
@@ -560,7 +564,23 @@
 
     </div>
 
-
+    <script>window.onload = function () {
+            // Check if the user has visited the page before
+            if (!localStorage.getItem('visited')) {
+                // Show the loader and set a timeout to hide it after 2 seconds
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = "none";
+                    document.getElementById('content').style.display = "block";
+                    // Mark the user as having visited
+                    localStorage.setItem('visited', 'true');
+                }, 3000);
+            } else {
+                // If the user has visited before, skip the loader
+                document.getElementById('loader').style.display = "none";
+                document.getElementById('content').style.display = "block";
+            }
+        };
+    </script>
 
 
     <!-- Show button when scrolling -->
@@ -633,23 +653,12 @@
     </script>
 
 
-    - <div id="loader " style="display: none;">Loading...</div>
 
 
 
-    <script>
-        window.onload = function () {
-            let isLoaded = false;
-            if (!isLoaded) {
-                setTimeout(() => {
-                    document.getElementById('loader').style.display = "none";
-                    document.getElementById('content').style.display = "block";
-                    isLoaded = true;
-                }, 2000);
-            }
-        };
-    </script>
-   
+
+
+
 
 
 
