@@ -30,14 +30,14 @@
             <div class="stars2"></div>
             <div class="stars3"></div>
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-lg navbar-danger">
                     <div class="container-fluid">
-                        <button class="navbar-toggler no-border " type="button" data-bs-toggle="collapse"
+                        <button class="navbar-toggler no-border custom-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <i class="navbar-toggler-icon "></i>
-                            <!-- <span class="navbar-toggler-icon  "></span> -->
+                            <span class="navbar-toggler-icon"></span>
                         </button>
+
                         <a class="navbar-brand text-white fs-3 fw-bold "
                             style="font-family: Georgia, 'Times New Roman', Times, serif" href="#">Er.Ajay</a>
 
@@ -159,11 +159,12 @@
                         <div class="col-lg-5 mt-5 text-center">
                             <img src="assest/img/comic-characters-2023311_1280.png" width="50%" alt="">
                         </div>
-                        <div class="col-lg-7 mt-5">
-                            <h4 class="mt-5 text-dark">About Me</h4>
-                            <h5 class="mt-4 text-dark">I can develop
+                        <div class="col-lg-7 mt-5 text-center text-lg-start">
+                            <h4 class="mt-5 text-dark text-center text-lg-start">About Me</h4>
+                            <h5 class="mt-4 text-dark text-center text-lg-start">I can develop
                                 that help people</h5>
-                            <p class="mt-4 about-content text-secondary">Hello, my name is Ajay, and I'm a skilled web
+                            <p class="mt-4 about-content text-secondary text-center text-lg-start">Hello, my name is
+                                Ajay, and I'm a skilled web
                                 developer. I have
                                 a deep understanding of programming and web development. I specialize in backend
                                 development
@@ -171,27 +172,31 @@
                                 interested
                                 in building features and work hard to fulfill that vision.
                             </p>
-                            <div class="row">
-                                <div class="col-lg-1">
-                                    <div class="icon-box mt-4 fs-4">
-                                        <i class="bi bi-code-slash"></i>
+                            <div class="row ">
+                                <div class="col-lg-1 text-center text-lg-start">
+                                    <div class="icon-box mt-4 fs-4  m-auto ">
+                                        <i class="bi bi-code-slash "></i>
                                     </div>
                                 </div>
                                 <div class="col-lg-10 mt-4">
-                                    <h5 class=" skill-heading1 mt-1 ms-lg-3 text-dark">Full-Stack Developer</h5>
-                                    <h6 class="skill-heading2 ms-lg-3 text-secondary">Top Rated – Upwork</h6>
+                                    <h5 class=" skill-heading1 mt-1 ms-lg-3 text-dark text-center text-lg-start">
+                                        Full-Stack Developer</h5>
+                                    <h6 class="skill-heading2 ms-lg-3 text-secondary text-center text-lg-start">Top
+                                        Rated – Upwork</h6>
                                 </div>
                             </div>
                             <hr class="mt-3" style="background-color: rgba(255, 255, 255, 0.247);">
                             <div class="row">
-                                <div class="col-lg-1 mt-1">
-                                    <div class="icon-box2 fs-4">
-                                        <i class="bi bi-globe text-white"></i>
+                                <div class="col-lg-1 mt-1  ">
+                                    <div class="icon-box2 fs-4 m-auto">
+                                        <i class="bi bi-globe text-white "></i>
                                     </div>
                                 </div>
                                 <div class="col-lg-10 mt-1">
-                                    <h5 class=" skill-heading1 mt-1 ms-lg-3 text-dark">Web Developer</h5>
-                                    <h6 class="skill-heading2 ms-lg-3 text-secondary">Level Two Seller - Fiverr</h6>
+                                    <h5 class=" skill-heading1 mt-1 ms-lg-3 text-dark text-center text-lg-start">Web
+                                        Developer</h5>
+                                    <h6 class="skill-heading2 ms-lg-3 text-secondary text-center text-lg-start">Level
+                                        Two Seller - Fiverr</h6>
                                 </div>
                             </div>
                         </div>
@@ -515,7 +520,7 @@
 
         <!-- footer -->
         <footer>
-            <div class="container-fluid bg-dark p-3 mt-5 text-center">
+            <div class="container-fluid footer  bg-dark p-3 mt-5 text-center">
                 <div class="row mb-3">
                     <div class="col-12">
                         <a href="https://www.facebook.com" target="_blank" class="text-light mx-2">
@@ -626,13 +631,13 @@
     </script>
 
 
-    - <div id="loader">Loading...</div>
+    - <div id="loader d-none">Loading...</div>
     <!-- <div id="content" style="display: none;">
 
 </div> -->
 
 
-    <script>
+    <!-- <script>
         window.onload = function () {
             let isLoaded = false;
             if (!isLoaded) {
@@ -641,6 +646,24 @@
                     document.getElementById('content').style.display = "block";
                     isLoaded = true;
                 }, 2000);
+            }
+        };
+    </script> -->
+    <script>
+        window.onload = function () {
+            // Check if the user has visited the page before
+            if (!localStorage.getItem('visited')) {
+                // If not, show the loader and set a timeout to hide it
+                document.getElementById('loader').style.display = "block";
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = "none";
+                    document.getElementById('content').style.display = "block";
+                    // Mark the user as having visited
+                    localStorage.setItem('visited', 'true');
+                }, 2000);
+            } else {
+                // If the user has visited before, skip the loader
+                document.getElementById('content').style.display = "block";
             }
         };
     </script>
