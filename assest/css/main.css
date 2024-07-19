@@ -56,9 +56,6 @@ body {
   }
 }
 
-
-
-
 .navbar .nav-link {
   color: white !important;
 }
@@ -366,15 +363,21 @@ button:hover {
   display: none;
 }
 
-
-
-
-
 #loader {
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #000;
-        }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: #000 !important;
+  font-size: 20px;
+}
+
+#content {
+  display: none;
+}
