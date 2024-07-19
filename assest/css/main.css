@@ -4,6 +4,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   position: relative;
