@@ -633,11 +633,11 @@
     </script>
 
 
-    - <div id="loader ">Loading...</div>
+    - <div id="loader " style="display: none;">Loading...</div>
 
 
 
-    <!-- <script>
+    <script>
         window.onload = function () {
             let isLoaded = false;
             if (!isLoaded) {
@@ -648,25 +648,8 @@
                 }, 2000);
             }
         };
-    </script> -->
-    <script>
-        window.onload = function () {
-            // Check if the user has visited the page before
-            if (!localStorage.getItem('visited')) {
-                // If not, show the loader and set a timeout to hide it
-                document.getElementById('loader').style.display = "block";
-                setTimeout(() => {
-                    document.getElementById('loader').style.display = "none";
-                    document.getElementById('content').style.display = "block";
-                    // Mark the user as having visited
-                    localStorage.setItem('visited', 'true');
-                }, 2000);
-            } else {
-                // If the user has visited before, skip the loader
-                document.getElementById('content').style.display = "block";
-            }
-        };
     </script>
+   
 
 
 
