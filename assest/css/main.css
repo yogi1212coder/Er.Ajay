@@ -187,7 +187,8 @@ body {
 }
 
 .card:hover {
-  background-color: rgba(232, 239, 241, 0.742);
+  
+  /* background-color: rgba(232, 239, 241, 0.742); */
   cursor: pointer;
   /* Larger box shadow on hover */
 }
